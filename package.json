@@ -4,9 +4,11 @@
   "description": "Template for webapp using React & Webpack",
   "main": "index.js",
   "scripts": {
+    "full": "npm run build && npm run test && npm run lint && npm run site",
     "test": "mocha -r ts-node/register src/**/*.spec.ts",
     "lint": "tslint ./src/**/*.ts",
-    "build": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
+    "build": "tsc",
+    "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
     "type": "git",
