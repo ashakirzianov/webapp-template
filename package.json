@@ -4,7 +4,8 @@
   "description": "Template for webapp using React & Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
