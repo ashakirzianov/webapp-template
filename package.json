@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "lint": "tslint ./src/**/*.ts",
     "build": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
@@ -31,6 +32,7 @@
   "devDependencies": {
     "awesome-typescript-loader": "^3.4.0",
     "source-map-loader": "^0.2.3",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.2"
   }
 }
