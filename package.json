@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "full": "npm run build && npm run test && npm run lint && npm run site",
-    "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "lint": "tslint ./src/**/*.ts",
+    "test": "mocha -r ts-node/register src/test-setup.ts src/**/*.spec.ts src/**/*.spec.tsx",
+    "lint": "tslint ./src/**",
     "build": "tsc",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
@@ -33,10 +33,15 @@
   },
   "devDependencies": {
     "@types/chai": "^4.0.6",
+    "@types/enzyme": "^3.1.5",
+    "@types/enzyme-adapter-react-16": "^1.0.1",
     "@types/mocha": "^2.2.44",
-    "awesome-typescript-loader": "^3.4.0",
+    "awesome-typescript-loader": "^3.4.1",
     "chai": "^4.1.2",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "mocha": "^4.0.1",
+    "react-addons-test-utils": "^15.6.2",
     "source-map-loader": "^0.2.3",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
