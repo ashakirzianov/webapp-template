@@ -9,7 +9,8 @@
     "test": "mocha -r ts-node/register src/test-setup.ts src/**/*.spec.ts src/**/*.spec.tsx",
     "lint": "tslint ./src/**",
     "build": "./node_modules/typescript/bin/tsc",
-    "start": "webpack --progress --colors & node ./app.js",
+    "start": "node ./app.js",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
@@ -28,20 +29,21 @@
   },
   "homepage": "https://github.com/ashakirzianov/webapp-template#readme",
   "dependencies": {
-    "@types/react": "^16.0.25",
-    "@types/react-dom": "^16.0.3",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "typescript": "^2.6.2",
     "@types/chai": "^4.0.6",
     "@types/enzyme": "^3.1.5",
     "@types/enzyme-adapter-react-16": "^1.0.1",
     "@types/mocha": "^2.2.44",
+    "@types/react": "^16.0.25",
+    "@types/react-dom": "^16.0.3",
     "awesome-typescript-loader": "^3.4.1",
     "chai": "^4.1.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   },
   "devDependencies": {
     "react-addons-test-utils": "^15.6.2",
