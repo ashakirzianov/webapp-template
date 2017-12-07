@@ -4,10 +4,11 @@
   "description": "Template for webapp using React & Webpack",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm run build",
     "full": "npm run build && npm run test && npm run lint && npm run site",
     "test": "mocha -r ts-node/register src/test-setup.ts src/**/*.spec.ts src/**/*.spec.tsx",
     "lint": "tslint ./src/**",
-    "build": "tsc",
+    "build": "./node_modules/typescript/bin/tsc",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
@@ -29,7 +30,8 @@
     "@types/react": "^16.0.25",
     "@types/react-dom": "^16.0.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "typescript": "^2.6.2"
   },
   "devDependencies": {
     "@types/chai": "^4.0.6",
@@ -44,7 +46,6 @@
     "react-addons-test-utils": "^15.6.2",
     "source-map-loader": "^0.2.3",
     "ts-node": "^3.3.0",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "tslint": "^5.8.0"
   }
 }
