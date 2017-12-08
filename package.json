@@ -13,7 +13,6 @@
     "webpack-build": "webpack --p --progress",
     "build": "npm run typescript-build && npm run webpack-build",
     "start": "node ./index.js",
-    "eb-start": "npm install && npm start",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
