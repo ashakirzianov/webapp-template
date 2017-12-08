@@ -10,7 +10,7 @@
     "lint": "tslint ./src/**",
     "build": "./node_modules/typescript/bin/tsc",
     "start": "node ./index.js",
-    "heroku-postbuild": "webpack -p --config --progress",
+    "heroku-postbuild": "webpack --config --progress",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
   },
   "repository": {
