@@ -11,7 +11,7 @@
     "lint": "tslint ./src/**",
     "typescript-build": "./node_modules/typescript/bin/tsc",
     "webpack-build": "webpack --p --progress",
-    "build": "npm run typescript-build && npm run webpack-build",
+    "build": "npm run webpack-build",
     "start": "node ./index.js",
     "eb-start": "npm start",
     "site": "webpack --progress --colors --watch & webpack-dev-server --progress --colors --open"
