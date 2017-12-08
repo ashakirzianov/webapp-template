@@ -1,13 +1,6 @@
-var http = require('http');
+var express = require('express');
+var app = express();
 
-var server = http.createServer(function(request, response) {
+app.use(express.static(__dirname + '/'));
 
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello heroku!!!");
-
-});
-
-var port = process.env.PORT || 1337;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+app.listen(process.env.PORT || 8080);
